@@ -2,13 +2,11 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="pocket.game.MainActivity" android:baselineAligned="false">
+    android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/backView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
@@ -24,16 +22,13 @@
         android:layout_alignParentTop="true"
         android:background="@drawable/button_arro"/>
 
-    <TextView
-        android:id="@+id/gameView"
+    <ImageView
+        android:id="@+id/settingsView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/game_here"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="?android:attr/colorPressedHighlight"
-        android:textSize="90sp"
-        android:textStyle="bold" />
+        android:layout_height="50sp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/menuButton"
+        android:background="@drawable/button_settingsy"
+        android:scaleType="fitXY"
+        android:src="@drawable/button_creditsl" />
 </RelativeLayout>

@@ -1,21 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/backView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/button_back" />
 
     <Button
         android:id="@+id/menuButton"
-        android:layout_width="60sp"
+        android:layout_width="50sp"
         android:layout_height="50sp"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/menus" />
+        android:background="@drawable/button_arro" />
+
+    <ImageView
+        android:id="@+id/settingsView"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/menuButton"
+        android:background="@drawable/button_settingsy"
+        android:scaleType="fitXY"
+        android:src="@drawable/button_settingsl" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textSound"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/textMusic"
+        android:layout_marginStart="92dp"
+        android:layout_toEndOf="@+id/menuButton"
+        android:text="Sound"
+        android:textAlignment="center"
+        android:textColor="?android:attr/colorPressedHighlight"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textMusic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textSound"
         android:layout_centerVertical="true"
-        android:text="Settings Here" />
+        android:text="Music"
+        android:textAlignment="center"
+        android:textColor="?android:attr/colorPressedHighlight"
+        android:textSize="25sp" />
+
+    <ToggleButton
+        android:id="@+id/togSoundButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:layout_alignBottom="@+id/textSound"
+        android:layout_marginStart="167dp"
+        android:layout_toEndOf="@+id/textSound"
+        android:checked="true"
+        android:text="ToggleButton" />
+
+    <ToggleButton
+        android:id="@+id/togMusicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40sp"
+        android:layout_alignBottom="@+id/textMusic"
+        android:layout_alignStart="@+id/togSoundButton"
+        android:checked="true"
+        android:text="ToggleButton" />
 </RelativeLayout>

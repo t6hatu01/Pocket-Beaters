@@ -7,12 +7,11 @@
     tools:context="pocket.game.MainActivity" android:baselineAligned="false">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/menubackView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:background="@android:color/holo_green_dark"
         android:scaleType="fitXY"
         android:src="@drawable/sunset" />
 
