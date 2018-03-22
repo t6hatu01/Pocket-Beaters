@@ -1,74 +1,39 @@
-package pocket.game;
+package ga.me;
 
-import android.app.Activity;
-import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-
-    private ImageButton playb;
-    private ImageButton shopb;
-    private ImageButton settb;
-    private ImageButton credb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
-
-        playb = findViewById(R.id.playButton);
-        playb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                play();
-            }
-        });
-
-        shopb = findViewById(R.id.shopButton);
-        shopb.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_main);
+        Button Heavy = (Button)findViewById(R.id.Heavy);
+        Heavy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                shop();
+
+                ImageView man = (ImageView)findViewById(R.id.player);
+                man.setImageResource(R.drawable.lpunch);
+                AnimationDrawable hpunch = (AnimationDrawable) man.getDrawable();
+                hpunch.start();
             }
         });
-
-        settb = findViewById(R.id.setButton);
-        settb.setOnClickListener(new View.OnClickListener() {
+        Button button = findViewById(R.id.Right);
+        final ImageView image = findViewById(R.id.player);
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                settings();
+                ((ViewGroup.MarginLayoutParams)image.getLayoutParams()).topMargin += 1;
+                image.requestLayout();
             }
         });
 
-        credb = findViewById(R.id.credButton);
-        credb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                credits();
-            }
-        });
     }
-    public void play(){
-        Intent intent = new Intent(this, GameActivity.class);
-        startActivity(intent);
-    }
-
-    public void shop(){
-        Intent intent2 = new Intent(this, ShopActivity.class);
-        startActivity(intent2);
-    }
-
-    public void settings(){
-        Intent intent3 = new Intent(this, SettingsActivity.class);
-        startActivity(intent3);
-    }
-
-    public void credits(){
-        Intent intent4 = new Intent(this, CreditActivity.class);
-        startActivity(intent4);
-    }
-
 }
