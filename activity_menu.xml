@@ -12,8 +12,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
+        android:background="@android:color/transparent"
         android:scaleType="fitXY"
-        android:src="@drawable/sunset" />
+        android:src="@drawable/menuback" />
 
     <ImageButton
         android:id="@+id/playButton"
@@ -22,7 +23,7 @@
         android:layout_above="@+id/shopButton"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="12dp"
-        android:background="@android:color/transparent"
+        android:background="#A11111"
         app:srcCompat="@drawable/button_playy" />
 
     <ImageButton
@@ -31,8 +32,8 @@
         android:layout_height="50sp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:background="@android:color/black"
-        app:srcCompat="@drawable/button_settingsy" />
+        android:background="#A11111"
+        app:srcCompat="@drawable/button_settingsl" />
 
     <ImageButton
         android:id="@+id/shopButton"
@@ -40,8 +41,8 @@
         android:layout_height="50sp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:background="@android:color/black"
-        app:srcCompat="@drawable/button_shopy" />
+        android:background="#A11111"
+        app:srcCompat="@drawable/button_shopl" />
 
     <ImageButton
         android:id="@+id/credButton"
@@ -49,6 +50,57 @@
         android:layout_height="50sp"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/playButton"
-        android:background="@android:color/transparent"
+        android:background="#A11111"
         app:srcCompat="@drawable/button_credits" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:text="created by"
+        android:textAlignment="center"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:text="Chrono Motion"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/nameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:fontFamily="serif"
+        android:text="Pocket"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#780522"
+        android:textSize="50sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/nameView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameView"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="serif"
+        android:text="Beaters"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#6d0c24"
+        android:textSize="60sp"
+        android:textStyle="bold|italic" />
+
 </RelativeLayout>

@@ -8,13 +8,23 @@
     tools:context="pocket.game.MainActivity" android:baselineAligned="false">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/gameView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/button_back" />
+        app:srcCompat="@android:color/background_light" />
+
+    <ImageView
+        android:id="@+id/player"
+        android:layout_width="100dp"
+        android:layout_height="140dp"
+        android:layout_above="@+id/Right"
+        android:layout_marginBottom="27dp"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/Jump"
+        app:srcCompat="@drawable/idle" />
 
     <Button
         android:id="@+id/menuButton"
@@ -24,16 +34,60 @@
         android:layout_alignParentTop="true"
         android:background="@drawable/button_arro"/>
 
-    <TextView
-        android:id="@+id/gameView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/game_here"
-        android:textAlignment="center"
-        android:textAllCaps="false"
-        android:textColor="?android:attr/colorPressedHighlight"
-        android:textSize="90sp"
-        android:textStyle="bold" />
+    <Button
+        android:id="@+id/Heavy"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/Jump"
+        android:layout_marginEnd="21dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="L" />
+
+    <Button
+        android:id="@+id/Jump"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/Right"
+        android:layout_toEndOf="@+id/Left"
+        android:text="J" />
+
+    <Button
+        android:id="@+id/Right"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/Crouch"
+        android:layout_toEndOf="@+id/Crouch"
+        android:text="R" />
+
+    <Button
+        android:id="@+id/Left"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Jump"
+        android:layout_marginStart="25dp"
+        android:text="L" />
+
+    <Button
+        android:id="@+id/Light"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/Heavy"
+        android:layout_toStartOf="@+id/Heavy"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/colorAccent"
+        android:text="H" />
+
+    <Button
+        android:id="@+id/Crouch"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="14dp"
+        android:layout_toEndOf="@+id/Left"
+        android:text="C" />
+
 </RelativeLayout>

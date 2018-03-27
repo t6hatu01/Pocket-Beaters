@@ -2,6 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -55,13 +56,24 @@
         android:textColor="?android:attr/colorPressedHighlight"
         android:textSize="25sp" />
 
+    <TextView
+        android:id="@+id/textLangue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textMusic"
+        android:layout_below="@+id/textMusic"
+        android:layout_marginTop="24dp"
+        android:text="Language"
+        android:textColor="?android:attr/colorPressedHighlight"
+        android:textSize="25sp" />
+
     <ToggleButton
         android:id="@+id/togSoundButton"
         android:layout_width="wrap_content"
         android:layout_height="40sp"
         android:layout_alignBottom="@+id/textSound"
-        android:layout_marginStart="167dp"
-        android:layout_toEndOf="@+id/textSound"
+        android:layout_marginStart="114dp"
+        android:layout_toEndOf="@+id/textLangue"
         android:checked="true"
         android:text="ToggleButton" />
 
@@ -69,8 +81,9 @@
         android:id="@+id/togMusicButton"
         android:layout_width="wrap_content"
         android:layout_height="40sp"
-        android:layout_alignBottom="@+id/textMusic"
         android:layout_alignStart="@+id/togSoundButton"
+        android:layout_centerVertical="true"
         android:checked="true"
         android:text="ToggleButton" />
+
 </RelativeLayout>

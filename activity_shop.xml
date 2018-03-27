@@ -20,7 +20,7 @@
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/menuButton"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/button_shopl" />
+        app:srcCompat="@android:color/holo_orange_dark" />
 
     <ImageView
         android:id="@+id/backView"
@@ -31,13 +31,63 @@
         android:scaleType="fitXY"
         app:srcCompat="@drawable/button_back" />
 
-    <TextView
-        android:id="@+id/shopView2"
+    <ImageView
+        android:id="@+id/itemView"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_above="@+id/buyButton1"
+        android:layout_marginStart="57dp"
+        android:layout_toEndOf="@+id/menuButton"
+        app:srcCompat="?android:attr/colorPressedHighlight" />
+
+    <ImageView
+        android:id="@+id/itemView2"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/shopView"
+        android:layout_marginEnd="85dp"
+        android:layout_marginTop="69dp"
+        app:srcCompat="?android:attr/colorPressedHighlight" />
+
+    <ImageButton
+        android:id="@+id/buyButton2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Shop Here"
-        android:textColor="?android:attr/colorPressedHighlight"
-        android:textSize="60sp" />
+        android:layout_alignEnd="@+id/itemView2"
+        android:layout_alignStart="@+id/itemView2"
+        android:layout_below="@+id/itemView2"
+        app:srcCompat="@android:color/background_light" />
+
+    <ImageButton
+        android:id="@+id/buyButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/itemView"
+        android:layout_alignStart="@+id/itemView"
+        android:layout_below="@+id/itemView2"
+        app:srcCompat="@android:color/background_light" />
+
+    <TextView
+        android:id="@+id/textCoins"
+        android:layout_width="100sp"
+        android:layout_height="50sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:text="50"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/textShop"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/menuButton"
+        android:text=" Shop"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="35sp" />
+
 </RelativeLayout>
