@@ -14,7 +14,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:scaleType="fitXY"
-        app:srcCompat="@android:color/background_light" />
+        app:srcCompat="@drawable/areena_taust" />
 
     <ImageView
         android:id="@+id/player"
@@ -22,8 +22,9 @@
         android:layout_height="140dp"
         android:layout_above="@+id/Right"
         android:layout_marginBottom="27dp"
-        android:layout_marginStart="11dp"
-        android:layout_toEndOf="@+id/Jump"
+        android:layout_marginStart="17dp"
+        android:layout_toEndOf="@+id/Right"
+        android:background="@color/colorAccent"
         app:srcCompat="@drawable/idle" />
 
     <Button
@@ -32,19 +33,9 @@
         android:layout_height="50sp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/button_arro"/>
-
-    <Button
-        android:id="@+id/Heavy"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/Jump"
-        android:layout_marginEnd="21dp"
-        android:layout_marginTop="13dp"
-        android:background="@drawable/round"
-        android:backgroundTint="@android:color/holo_orange_light"
-        android:text="L" />
+        android:background="@android:color/transparent"
+        android:text="M"
+        android:textSize="40sp" />
 
     <Button
         android:id="@+id/Jump"
@@ -52,15 +43,15 @@
         android:layout_height="40dp"
         android:layout_above="@+id/Right"
         android:layout_toEndOf="@+id/Left"
-        android:text="J" />
+        android:background="@drawable/button_j" />
 
     <Button
         android:id="@+id/Right"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_above="@+id/Crouch"
-        android:layout_toEndOf="@+id/Crouch"
-        android:text="R" />
+        android:layout_toEndOf="@+id/Jump"
+        android:background="@drawable/button_r" />
 
     <Button
         android:id="@+id/Left"
@@ -69,17 +60,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/Jump"
         android:layout_marginStart="25dp"
-        android:text="L" />
-
-    <Button
-        android:id="@+id/Light"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_below="@+id/Heavy"
-        android:layout_toStartOf="@+id/Heavy"
-        android:background="@drawable/round"
-        android:backgroundTint="@color/colorAccent"
-        android:text="H" />
+        android:background="@drawable/button_l" />
 
     <Button
         android:id="@+id/Crouch"
@@ -88,6 +69,29 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="14dp"
         android:layout_toEndOf="@+id/Left"
-        android:text="C" />
+        android:background="@drawable/button_c" />
+
+    <Button
+        android:id="@+id/Heavy"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_above="@+id/Light"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="L"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/Light"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/Crouch"
+        android:layout_toStartOf="@+id/Heavy"
+        android:background="@drawable/round"
+        android:backgroundTint="#8c3520"
+        android:text="H"
+        android:textSize="24sp" />
 
 </RelativeLayout>

@@ -14,30 +14,30 @@
         android:background="@drawable/button_arro" />
 
     <ImageView
+        android:id="@+id/backView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:scaleType="fitXY"
+        app:srcCompat="@android:color/transparent" />
+
+    <ImageView
         android:id="@+id/shopView"
         android:layout_width="match_parent"
         android:layout_height="50sp"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/menuButton"
         android:scaleType="fitXY"
-        app:srcCompat="@android:color/holo_orange_dark" />
-
-    <ImageView
-        android:id="@+id/backView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/menuButton"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/button_back" />
+        app:srcCompat="@android:color/background_light" />
 
     <ImageView
         android:id="@+id/itemView"
         android:layout_width="150sp"
         android:layout_height="150sp"
-        android:layout_above="@+id/buyButton1"
-        android:layout_marginStart="57dp"
-        android:layout_toEndOf="@+id/menuButton"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/itemView2"
+        android:layout_marginStart="83dp"
         app:srcCompat="?android:attr/colorPressedHighlight" />
 
     <ImageView
@@ -57,6 +57,7 @@
         android:layout_alignEnd="@+id/itemView2"
         android:layout_alignStart="@+id/itemView2"
         android:layout_below="@+id/itemView2"
+        android:scaleType="fitXY"
         app:srcCompat="@android:color/background_light" />
 
     <ImageButton
@@ -66,6 +67,7 @@
         android:layout_alignEnd="@+id/itemView"
         android:layout_alignStart="@+id/itemView"
         android:layout_below="@+id/itemView2"
+        android:scaleType="fitXY"
         app:srcCompat="@android:color/background_light" />
 
     <TextView

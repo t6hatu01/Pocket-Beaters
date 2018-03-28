@@ -14,7 +14,8 @@
         android:layout_alignParentStart="true"
         android:background="@android:color/transparent"
         android:scaleType="fitXY"
-        android:src="@drawable/menuback" />
+        android:src="@drawable/areena_taust"
+        app:srcCompat="@drawable/valikko_tausta" />
 
     <ImageButton
         android:id="@+id/playButton"
@@ -23,8 +24,8 @@
         android:layout_above="@+id/shopButton"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="12dp"
-        android:background="#A11111"
-        app:srcCompat="@drawable/button_playy" />
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/button_play" />
 
     <ImageButton
         android:id="@+id/setButton"
@@ -32,8 +33,8 @@
         android:layout_height="50sp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:background="#A11111"
-        app:srcCompat="@drawable/button_settingsl" />
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/button_settingsg" />
 
     <ImageButton
         android:id="@+id/shopButton"
@@ -41,8 +42,8 @@
         android:layout_height="50sp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:background="#A11111"
-        app:srcCompat="@drawable/button_shopl" />
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/button_shopg" />
 
     <ImageButton
         android:id="@+id/credButton"
@@ -50,8 +51,8 @@
         android:layout_height="50sp"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/playButton"
-        android:background="#A11111"
-        app:srcCompat="@drawable/button_credits" />
+        android:background="@android:color/transparent"
+        app:srcCompat="@drawable/button_creditsnew" />
 
     <TextView
         android:id="@+id/textView"
@@ -79,8 +80,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_alignStart="@+id/setButton"
+        android:layout_marginTop="45dp"
         android:fontFamily="serif"
         android:text="Pocket"
         android:textAlignment="center"
@@ -93,8 +94,9 @@
         android:id="@+id/nameView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/nameView"
-        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/nameView"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@+id/textView"
         android:fontFamily="serif"
         android:text="Beaters"
         android:textAlignment="center"
