@@ -10,36 +10,29 @@
         android:id="@+id/Heavy"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/Jump"
+        android:layout_alignBottom="@+id/Jump"
         android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/Jump"
-        android:layout_marginEnd="52dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
         android:background="@drawable/round"
-        android:backgroundTint="@android:color/holo_orange_light"
-        android:text="L" />
+        android:backgroundTint="@color/colorAccent"
+        android:text="H" />
 
     <Button
         android:id="@+id/Jump"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_above="@+id/Right"
-        android:layout_toEndOf="@+id/Left"
+        android:layout_above="@+id/Backward"
+        android:layout_toEndOf="@+id/Backward"
         android:text="J" />
 
     <Button
-        android:id="@+id/Right"
+        android:id="@+id/Backward"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_above="@+id/Crouch"
-        android:layout_toEndOf="@+id/Crouch"
-        android:text="R" />
-
-    <Button
-        android:id="@+id/Left"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/Jump"
+        android:layout_marginStart="15dp"
         android:text="L" />
 
     <Button
@@ -47,30 +40,43 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/Left"
+        android:layout_toEndOf="@+id/Backward"
         android:text="C" />
 
     <Button
         android:id="@+id/Light"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/Right"
-        android:layout_marginEnd="118dp"
-        android:layout_marginTop="13dp"
+        android:layout_below="@+id/Heavy"
+        android:layout_marginEnd="17dp"
+        android:layout_toStartOf="@+id/Heavy"
         android:background="@drawable/round"
-        android:backgroundTint="@color/colorAccent"
-        android:text="H" />
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="L" />
 
     <ImageView
         android:id="@+id/player"
         android:layout_width="100dp"
         android:layout_height="140dp"
-        android:layout_above="@+id/Right"
-        android:layout_marginBottom="27dp"
-        android:layout_marginStart="11dp"
+        android:layout_above="@+id/Jump"
         android:layout_toEndOf="@+id/Jump"
         app:srcCompat="@drawable/idle" />
+
+    <Button
+        android:id="@+id/Forward"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/Jump"
+        android:layout_toEndOf="@+id/Crouch"
+        android:text="R" />
+
+    <Button
+        android:id="@+id/blank"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_alignBaseline="@+id/Backward"
+        android:layout_alignBottom="@+id/Backward"
+        android:layout_toEndOf="@+id/Backward" />
 
 
 </RelativeLayout>

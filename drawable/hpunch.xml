@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android = "http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item android:drawable="@drawable/idle"
+        android:duration = "70"/>
+
+    <item android:drawable="@drawable/hpstart"
+        android:duration = "130"/>
+
+    <item android:drawable="@drawable/hpkaks"
+        android:duration = "130"/>
+
+    <item android:drawable="@drawable/hpkolme"
+        android:duration = "130"/>
+
+    <item android:drawable="@drawable/hpnelja"
+        android:duration = "70"/>
+
+    <item android:drawable="@drawable/hpviis"
+        android:duration = "70"/>
+
+    <item android:drawable="@drawable/hpkuus"
+        android:duration = "130"/>
+
+    <item android:drawable="@drawable/hpstart"
+        android:duration = "130"/>
+
+    <item android:drawable="@drawable/idle"
+        android:duration = "70"/>
+
+</animation-list>
