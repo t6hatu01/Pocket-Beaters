@@ -11,25 +11,27 @@ import com.badlogic.gdx.physics.box2d.World;
 
 import fighting.game.FightingGame;
 
-public class Avatar extends Sprite {
-    public World world;
-    private Body body2;
+public class Ground extends Sprite {
 
-    public Avatar(World world, String name, float x, float y){
-        super(new Texture(name));
+    private World world;
+    private Body body3;
+
+    public Ground(World world){
+        super(new Texture("peliareenas.png"));
         this.world = world;
-        setPosition(x - getWidth() / 2, y - getHeight() / 2);
-        createAvatar();
+        setPosition(FightingGame.V_WIDTH / 2f, FightingGame.V_HEIGHT / 2f - 900);
+        createBody();
     }
 
-    public void createAvatar(){
+    void createBody(){
         BodyDef bdef = new BodyDef();
 
-        bdef.type = BodyDef.BodyType.DynamicBody;
+        bdef.type = BodyDef.BodyType.StaticBody;
 
-        bdef.position.set (200 / FightingGame.PPM, getY() / FightingGame.PPM);
+        bdef.position.set (getX() / FightingGame.PPM, getY() / FightingGame.PPM);
 
-        body2 = world.createBody(bdef);
+
+        body3 = world.createBody(bdef);
 
         PolygonShape shape = new PolygonShape();
         shape.setAsBox(getWidth() / 2 / FightingGame.PPM, getHeight() / 2 / FightingGame.PPM);
@@ -38,18 +40,8 @@ public class Avatar extends Sprite {
         fiDef.shape = shape;
         fiDef.density = 1f;
 
-        Fixture fixture = body2.createFixture(fiDef);
+        Fixture fixture = body3.createFixture(fiDef);
 
         shape.dispose();
-
-    }
-
-    public  void updateAvatar() {
-        this.setPosition(body2.getPosition().x * FightingGame.PPM,
-                body2.getPosition().y * FightingGame.PPM);
-    }
-
-    public Body getBody2() {
-        return this.body2;
     }
 }

@@ -1,20 +1,10 @@
 package fighting.game.Scenes;
 
-import com.badlogic.gdx.graphics.Color;
-import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
-import com.badlogic.gdx.scenes.scene2d.ui.Table;
-import com.badlogic.gdx.utils.viewport.FitViewport;
-import com.badlogic.gdx.utils.viewport.Viewport;
 
-
-import fighting.game.FightingGame;
 
 public class Hud {
-    public Stage stage;
+    /*public Stage stage;
     private Viewport viewport;
 
     private Integer worldTimer;
@@ -26,10 +16,10 @@ public class Hud {
     Label timeLabel;
     Label levelLabel;
     Label worldLabel;
-    Label playerLabel;
+    Label playerLabel;*/
 
     public Hud(SpriteBatch sb){
-        worldTimer = 300;
+        /*worldTimer = 300;
         timeCount = 0;
         health = 0;
 
@@ -55,8 +45,11 @@ public class Hud {
         table.add(levelLabel).expandX();
         table.add(countdownLabel).expandX();
 
-        stage.addActor(table);
+        stage.addActor(table);*/
 
     }
 
+
 }
+
+
